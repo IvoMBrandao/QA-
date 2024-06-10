@@ -2,17 +2,17 @@
     "usuarios": [
       {
         "name": "Peter Jason Quill",
-        "email": "peter.quill@alura.com.br",
+        "email": "peter.quill@ara.com.br",
         "password": "Senha12345"
       },
       {
         "name": "Gamora Zen Whoberi Ben Titan",
-        "email": "gamora@alura.com",
+        "email": "gamora@ara.com",
         "password": "Senha123456"
       },
       {
         "name": "Rocket Raccoon",
-        "email": "rocket.raccoon@alura.com",
+        "email": "rocket.raccoon@ara.com",
         "password": "Senha1234567"
       },
       {
@@ -22,13 +22,143 @@
       },
       {
         "name": "Drax",
-        "email": "drax@alura.com",
+        "email": "drax@ara.com",
         "password": "Senha123456789"
       },
       {
         "name": "Yondu Udonta",
-        "email": "youndu@alura.com.br",
+        "email": "youndu@ara.com.br",
         "password": "Senha1234567890"
+      },
+      {
+        "name": "Peter Jason Quill",
+        "email": "peter.quill@ara.com.br",
+        "password": "Senha12345"
+      },
+      {
+        "name": "Gamora Zen Whoberi Ben Titan",
+        "email": "gamora@ara.com",
+        "password": "Senha123456"
+      },
+      {
+        "name": "Rocket Raccoon",
+        "email": "rocket.raccoon@ara.com",
+        "password": "Senha1234567"
+      },
+      {
+        "name": "Groot",
+        "email": "groot@alura.com.br",
+        "password": "Senha12345678"
+      },
+      {
+        "name": "Drax",
+        "email": "drax@ara.com",
+        "password": "Senha123456789"
+      },
+      {
+        "name": "Yondu Udonta",
+        "email": "youndu@ara.com.br",
+        "password": "Senha1234567890"
+      },
+      {
+        "name": "Nebula",
+        "email": "nebula@ara.com",
+        "password": "Senha123123"
+      },
+      {
+        "name": "Mantis",
+        "email": "mantis@ara.com.br",
+        "password": "Senha1231234"
+      },
+      {
+        "name": "Kraglin Obfonteri",
+        "email": "kraglin@ara.com",
+        "password": "Senha12312345"
+      },
+      {
+        "name": "Ego",
+        "email": "ego@ara.com.br",
+        "password": "Senha123123456"
+      },
+      {
+        "name": "Ayesha",
+        "email": "ayesha@ara.com",
+        "password": "Senha1231234567"
+      },
+      {
+        "name": "Adam Warlock",
+        "email": "adam.warlock@ara.com",
+        "password": "Senha12312345678"
+      },
+      {
+        "name": "Howard the Duck",
+        "email": "howard.duck@ara.com",
+        "password": "Senha123123456789"
+      },
+      {
+        "name": "Taneleer Tivan",
+        "email": "taneleer.tivan@ara.com",
+        "password": "Senha1231234567890"
+      },
+      {
+        "name": "Carina",
+        "email": "carina@ara.com.br",
+        "password": "Senha123321"
+      },
+      {
+        "name": "Stakar Ogord",
+        "email": "stakar@ara.com",
+        "password": "Senha1233214"
+      },
+      {
+        "name": "Martinex",
+        "email": "martinex@ara.com",
+        "password": "Senha12332145"
+      },
+      {
+        "name": "Charlie-27",
+        "email": "charlie.27@ara.com.br",
+        "password": "Senha123321456"
+      },
+      {
+        "name": "Aleta Ogord",
+        "email": "aleta.ogord@ara.com",
+        "password": "Senha1233214567"
+      },
+      {
+        "name": "Mainframe",
+        "email": "mainframe@ara.com",
+        "password": "Senha12332145678"
+      },
+      {
+        "name": "Starhawk",
+        "email": "starhawk@ara.com.br",
+        "password": "Senha123321456789"
+      },
+      {
+        "name": "Rhomann Dey",
+        "email": "rhomann.dey@ara.com",
+        "password": "Senha1233214567890"
+      },
+      {
+        "name": "Meredith Quill",
+        "email": "meredith.quill@ara.com",
+        "password": "Senha123321123"
+      },
+      {
+        "name": "Nova Prime",
+        "email": "nova.prime@ara.com",
+        "password": "Senha1233211234"
+      },
+      {
+        "name": "Korath",
+        "email": "korath@ara.com",
+        "password": "Senha12332112345"
+      },
+      {
+        "name": "Ronan the Accuser",
+        "email": "ronan.accuser@ara.com",
+        "password": "Senha123321123456"
       }
     ]
   }
