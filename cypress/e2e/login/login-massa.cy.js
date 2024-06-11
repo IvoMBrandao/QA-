@@ -10,6 +10,7 @@ describe('Página de Login', () => {
             cy.get('#email').clear().type(usuario.email);
             cy.get('#senha').clear().type(usuario.password);
             cy.get('#btn-entrar').click();
+            cy.contains('E-mail ou senha inválidos').should('be.visible')
         });
     });
 });
