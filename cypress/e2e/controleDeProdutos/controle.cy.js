@@ -5,21 +5,21 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T001-Teste o botão voltar sai da aplicação?', () => {
+  it('T001-Deve sair da aplicação ao clicar no botão de "Voltar"', () => {
 
     cy.get('.nav-link').click();
     cy.contains('login.').should('be.visible')
 
   });
 
-  it('T002-Teste se o botão Controle de Produtos recarrega a pagina', () => {
+  it('T002-Deve Sair Teste se o botão Controle de Produtos recarrega a pagina', () => {
 
     cy.get('.navbar-brand').click();
 
 
   });
 
-  it('T003-Teste se o botão de Adicionar abre o modal de 1°.', () => {
+  it('T003-Deve abrir o modal no primeiro click ao Botão.', () => {
 
     cy.get('#btn-adicionar').click();
     cy.contains('Produto').should('be.visible')
@@ -27,7 +27,14 @@ describe('Página de Controle', () => {
   });
 
 
-  it('T004-Prencher o Modal c/ apenas 1 campo do modal.', () => {
+  it('T004-Não deve preencher o Modal c/ apenas 1 campo do modal.', () => {
+    cy.modal();
+    cy.get('#btn-salvar').click();
+    cy.contains('Todos os campos são obrigatórios para o cadastro!').should('be.visible')
+
+  });
+
+  it('T005-Não deve preencher o Modal c/ apenas 1 campo do modal.', () => {
     cy.modal();
     cy.get('#codigo').type('1234');
     cy.get('#btn-salvar').click();
@@ -35,7 +42,9 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T005-Prencher o Modal c/ apenas 2 campos do modal.', () => {
+
+
+  it('T006-Não deve preencher o Modal c/ apenas 2 campos do modal.', () => {
     cy.modal();
     cy.get('#codigo').type('1234');
     cy.get('#nome').type('1234');
@@ -44,7 +53,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T006-Prencher o Modal c/ apenas 3 campos do modal.', () => {
+  it('T007-Não deve preencher o Modal c/ apenas 3 campos do modal.', () => {
 
     cy.modal();
     cy.get('#codigo').type('1234');
@@ -55,7 +64,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T007-Prencher o Modal c/ apenas 4 campos do modal.', () => {
+  it('T008-Não deve preencher o Modal c/ apenas 4 campos do modal.', () => {
     cy.modal();
     cy.get('#codigo').type('1234');
     cy.get('#nome').type('1234');
@@ -66,7 +75,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T008- Prencher todo o Modal.', () => {
+  it('T009-Deve Salvar o Modal com todos os campos preenchidos..', () => {
     cy.modal();
 
     const date = '20010101';
@@ -84,7 +93,7 @@ describe('Página de Controle', () => {
     cy.get('#mensagem').should('not.be.visible');
   });
 
-  it('T009- Verificar se o botão "X" está fechando o modal.', () => {
+  it('T010- Deve fechar o modal ao clicar no Botão "X".', () => {
     cy.modal();
 
     cy.get('.modal-header > .close').click();
@@ -92,7 +101,7 @@ describe('Página de Controle', () => {
   });
 
 
-  it('T010- Verificar se o botão "X" do alert está fechando a mensagem.', () => {
+  it('T011- Deve Fechar o alert do modal ao clicar no botão "X".', () => {
     cy.modal();
 
     cy.get('#codigo').type('1234');
@@ -105,7 +114,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T011- Verificar se o modal salva com a label Quantidade e Valor aceitando letras', () => {
+  it('T012- Não Deve Salvar o modal com as Labels (Quantidade e Valor) com Caracteres especias.', () => {
     cy.modal();
 
     const date = '20010101';
@@ -126,7 +135,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T012- Verificar se apos o modal ser completo ele fecha clicando na opção sair.', () => {
+  it('T013-Deve verificar se apos o modal ser completo ele fecha clicando na opção sair.', () => {
     cy.modal();
 
     const date = '20010101';
@@ -147,7 +156,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T013- Verificar se o botão de editar  funciona corretamente.', () => {
+  it('T018- Deve verificar se o botão de editar funciona corretamente.', () => {
     cy.modal();
 
     const date = '20010101';
@@ -169,19 +178,7 @@ describe('Página de Controle', () => {
 
 
 
-    //aqui a parte nova
-
-
-    it('T014- Verificar se o botão "X" está fechando o modal.', () => {
-      cy.modal();
-
-      cy.get('.modal-header > .close').click();
-      cy.get('tr > :nth-child(3)').should('be.visible');
-
-    });
-
-
-    it('T015- Verificar se o botão "X" do alert está fechando a mensagem.', () => {
+    it('T015-Deve verificar se o botão "X" do alert está fechando a mensagem.', () => {
       cy.modal();
 
       cy.get('#codigo').type('1234');
@@ -194,7 +191,7 @@ describe('Página de Controle', () => {
 
     });
 
-    it('T016- Verificar se o modal salva com a label Quantidade e Valor aceitando letras', () => {
+    it('T016- Deve verificar se o modal salva com a label Quantidade e Valor aceitando letras', () => {
       cy.modal();
 
       const date = '20010101';
@@ -214,53 +211,8 @@ describe('Página de Controle', () => {
 
 
     });
-
-    it('T017- Deve fechar  o modal apos ser completo e clicar na opção sair.', () => {
-      cy.modal();
-
-      const date = '20010101';
-      const formattedDate = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
-
-      cy.get('input[type="date"]').type(formattedDate);
-
-      cy.get('#codigo').type('1234');
-      cy.get('#nome').type('1234');
-      cy.get('#quantidade').type('123');
-      cy.get('#valor').type('123');
-      cy.get('#data').type(formattedDate);
-      cy.get('#btn-salvar').click();
-
-
-      cy.get('#mensagem').should('not.be.visible');
-      cy.get('#btn-sair').click()
-
-    });
-
-
-    it('T018- Verificar se o botão de editar  funciona corretamente.', () => {
-      cy.modal();
-
-      const date = '20010101';
-      const formattedDate = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
-
-      cy.get('input[type="date"]').type(formattedDate);
-
-      cy.get('#codigo').type('1234');
-      cy.get('#nome').type('1234');
-      cy.get('#quantidade').type('123');
-      cy.get('#valor').type('123');
-      cy.get('#data').type(formattedDate);
-      cy.get('#btn-salvar').click();
-
-
-      cy.get('#mensagem').should('not.be.visible');
-      cy.get('#btn-sair').click();
-
-      cy.get(':nth-child(6) > :nth-child(1)').click();
-      cy.get('#btn-salvar').should('be.visible');
-    });
-
-    it('T019- Verificar se o botão de Excluir  funciona corretamente.', () => {
+    
+    it('T017-Deve verificar se o botão de Excluir funciona corretamente.', () => {
       cy.modal();
 
       const date = '20010101';
