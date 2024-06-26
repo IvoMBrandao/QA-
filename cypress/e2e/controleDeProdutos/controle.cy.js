@@ -12,7 +12,7 @@ describe('Página de Controle', () => {
 
   });
 
-  it('T002-Deve Sair Teste se o botão Controle de Produtos recarrega a pagina', () => {
+  it('T002- Deve Recarregar a Pagina ao Clicar no Botão "Controle de Produto".', () => {
 
     cy.get('.navbar-brand').click();
 
@@ -178,7 +178,7 @@ describe('Página de Controle', () => {
 
 
 
-    it('T015-Deve verificar se o botão "X" do alert está fechando a mensagem.', () => {
+    it('T015-T015- Deve-se fechar o alert ao clicar no "X" da mensagem.', () => {
       cy.modal();
 
       cy.get('#codigo').type('1234');
@@ -191,7 +191,7 @@ describe('Página de Controle', () => {
 
     });
 
-    it('T016- Deve verificar se o modal salva com a label Quantidade e Valor aceitando letras', () => {
+    it('T016- Não Deve salva o Modal com a label Quantidade e Valor aceitando letras.', () => {
       cy.modal();
 
       const date = '20010101';
@@ -212,7 +212,7 @@ describe('Página de Controle', () => {
 
     });
     
-    it('T017-Deve verificar se o botão de Excluir funciona corretamente.', () => {
+    it('T017- Deve excluir o item ao clicar no botão "Excluir".', () => {
       cy.modal();
 
       const date = '20010101';
